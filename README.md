@@ -67,6 +67,13 @@ theta=np.array([0,0,0])
 j,grad=costfunction(theta,x_train,y)
 print(j)
 print(grad)
+
+x_train=np.hstack((np.ones((x.shape[0],1)),x))
+theta=np.array([-24,0.2,0.2])
+j,grad=costfunction(theta,x_train,y)
+print(j)
+print(grad)
+
 def cost(theta,x,y):
   h=sigmoid(np.dot(x,theta))
   j=-(np.dot(y,np.log(h))+np.dot(1-y,np.log(1-h)))/x.shape[0]
@@ -112,13 +119,26 @@ np.mean(predict(res.x,x)==y)
 
 ```
 # Output:
-![](./ot1.PNG)
-![](./ot2.PNG)
-![](./ot3.PNG)
-![](./ot4.PNG)
-![](./ot5.PNG)
-![](./ot6.PNG)
-![](./ot7.PNG)
+### Array of X:
+![](./o1.jpg)
+### Array of Y:
+![](./o2.jpg)
+### Graph:
+![](./o3.jpg)
+### Sigmoid function:
+![](./o4.jpg)
+### X_train grad:
+![](./o5.jpg)
+### y_train grad:
+![](./o6.jpg)
+### Print res:
+![](./o7.jpg)
+### Decision Boundary:
+![](./o8.jpg)
+### Probability value:
+![](./o9.jpg)
+### Prediction value of mean
+![](./o10.jpg)
 
 
 # Result:
